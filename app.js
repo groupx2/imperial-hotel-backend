@@ -27,11 +27,11 @@ const corsOptions = {
   origin: true,
   methods: ["POST,GET,PATCH"],
   credentials: true,
-  maxAge: 36000000000000
 };
 
 app.use(cors(corsOptions));
 
+app.options('*', cors()) ;
 
 app.set('view engine', 'ejs');
 
