@@ -51,7 +51,8 @@ exports.getAvailabeRooms = catchAsync(async (req,res,next) => {
     ),
     httpOnly: true,
     secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
-    sameSite: "none"
+    sameSite: "none",
+    domain: 'https://imperial-hotel.netlify.app'
   });
      req.query = Object.assign(req.query,{$or: [{"checkOut" : { lt : Date.now() }},{"checkOut" : { $eq : null}}]});
      next();
