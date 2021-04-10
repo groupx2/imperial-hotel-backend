@@ -45,20 +45,19 @@ exports.resizeRoomImages = catchAsync(async (req, res, next) => {
 });
 
 exports.getAvailabeRooms = catchAsync(async (req,res,next) => {
+     console.log(cookie);
      req.query = Object.assign(req.query,{$or: [{"checkOut" : { lt : Date.now() }},{"checkOut" : { $eq : null}}]});
      next();
 });
 
 exports.getAvailabeRoomCategories = catchAsync(async (req, res, next) => {
-  res.cookie('jwt', "token", {
-    expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
-    ),
-    httpOnly: true,
-    secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
-    sameSite: "none",
-    domain: 'https://imperial-hotel.netlify.app'
-  });
+  const cookie = req.headers.cookie;
+   //const cookie = "user=hussein; samesite=strict; secure";
+   const cookie = "user=hussein; samesite=lax; secure";
+   //const cookie = "user=hussein; samesite=none; secure";
+   //const cookie = "user=hussein;";
+
+   res.setHeader("set-cookie", [cookie]);
   const availableRooms = await Room.aggregate([
     {
      $match:{$or: [{"checkOut" : { $lt : Date.now() }},{"checkOut" : { $eq : null}}]}
