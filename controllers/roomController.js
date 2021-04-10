@@ -53,8 +53,8 @@ exports.getAvailabeRooms = catchAsync(async (req,res,next) => {
 exports.getAvailabeRoomCategories = catchAsync(async (req, res, next) => {
   const cookie = req.headers.cookie;
    //const cookie = "user=hussein; samesite=strict; secure";
-   const cookie = "user=hussein; samesite=lax; secure";
-   //const cookie = "user=hussein; samesite=none; secure";
+  // const cookie = "user=hussein; samesite=lax; secure";
+   const cookie = "user=hussein; samesite=none; secure";
    //const cookie = "user=hussein;";
 
    res.setHeader("set-cookie", [cookie]);
