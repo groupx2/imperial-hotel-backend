@@ -1,0 +1,108 @@
+[
+    {
+        "name": "KING HILTON GUEST ROOM",
+        "price": "40000",
+        "description": "Seating area with sofa, 32-inch LCD TV, work desk Relax in this Art Deco-style guest room, featuring 1 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the 32-inch LCD TV. Special touches include a selection of magazines and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Single"
+    },
+    {
+        "name": "KING HILTON GUEST ROOM",
+        "price": "50000",
+        "description": "Seating area with sofa, 32-inch LCD TV, work desk Relax in this Art Deco-style guest room, featuring 2 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the 32-inch LCD TV. Special touches include a selection of magazines and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Double"
+    },
+    {
+        "name": "KING HILTON GUEST ROOM",
+        "price": "60000",
+        "description": "Seating area with sofa, 32-inch LCD TV, work desk Relax in this Art Deco-style guest room, featuring 3 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the 32-inch LCD TV. Special touches include a selection of magazines and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Triple"
+    },
+    {
+        "name": "KING HILTON DELUXE",
+        "price": "80000",
+        "description": "Ocean view, upgraded amenities, seating area with sofa Take in the stunning ocean view from this stylish guest room, featuring 1 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include newspapers, bathrobe, slippers, mineral water and fruit.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Single"
+    },
+    {
+        "name": "KING HILTON DELUXE",
+        "price": "100000",
+        "description": "Ocean view, upgraded amenities, seating area with sofa Take in the stunning ocean view from this stylish guest room, featuring 2 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include newspapers, bathrobe, slippers, mineral water and fruit.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Double"
+    },
+    {
+        "name": "KING HILTON DELUXE",
+        "price": "120000",
+        "description": "Ocean view, upgraded amenities, seating area with sofa Take in the stunning ocean view from this stylish guest room, featuring 3 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include newspapers, bathrobe, slippers, mineral water and fruit.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Triple"
+    },
+    {
+        "name": "KING HILTON EXECUTIVE ROOM",
+        "price": "60000",
+        "description": "Ocean view, Executive Lounge access, larger room, seating area with sofa, work area Relax in this large Art Deco-style guest room and take advantage of Executive Lounge access with complimentary breakfast and refreshments. This room offers 1 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a daily newspaper, bathrobe and slippers.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Single"
+    },
+    {
+        "name": "KING HILTON EXECUTIVE ROOM",
+        "price": "70000",
+        "description": "Ocean view, Executive Lounge access, larger room, seating area with sofa, work area Relax in this large Art Deco-style guest room and take advantage of Executive Lounge access with complimentary breakfast and refreshments. This room offers 2 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a daily newspaper, bathrobe and slippers.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Double"
+    },
+    {
+        "name": "KING HILTON EXECUTIVE ROOM",
+        "price": "90000",
+        "description": "Ocean view, Executive Lounge access, larger room, seating area with sofa, work area Relax in this large Art Deco-style guest room and take advantage of Executive Lounge access with complimentary breakfast and refreshments. This room offers 3 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a daily newspaper, bathrobe and slippers.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Triple"
+    },
+    {
+        "name": "KING CORNER SUITE",
+        "price": "60000",
+        "description": "Views of Colombo, Executive Lounge access, high floor, corner suite, 61 sq m/656 sq ft, sofa Spoil yourself in this stylish corner suite, featuring 1 king bed and a seating area with sofa. Enjoy Executive Lounge access, offering complimentary breakfast and refreshments. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a bathrobe, slippers and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Single"
+    },
+    {
+        "name": "KING CORNER SUITE",
+        "price": "70000",
+        "description": "Views of Colombo, Executive Lounge access, high floor, corner suite, 61 sq m/656 sq ft, sofa Spoil yourself in this stylish corner suite, featuring 1 king bed and a seating area with sofa. Enjoy Executive Lounge access, offering complimentary breakfast and refreshments. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a bathrobe, slippers and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Double"
+    },
+    {
+        "name": "KING CORNER SUITE",
+        "price": "90000",
+        "description": "Views of Colombo, Executive Lounge access, high floor, corner suite, 61 sq m/656 sq ft, sofa Spoil yourself in this stylish corner suite, featuring 1 king bed and a seating area with sofa. Enjoy Executive Lounge access, offering complimentary breakfast and refreshments. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a bathrobe, slippers and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Triple"
+    },
+    {
+        "name": "KING BUSINESS SUITE",
+        "price": "60000",
+        "description": "Ocean view, Executive Lounge access, high floor, 61 sq m/656 sq ft, seating area Enjoy a stay in this large high-floor suite, complete with scenic views, seating area and range of convenient amenities. Take advantage of Executive Lounge access, offering complimentary breakfast and refreshments. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a plush bathrobe, slippers and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Single"
+    },
+    {
+        "name": "KING BUSINESS SUITE",
+        "price": "70000",
+        "description": "Ocean view, Executive Lounge access, high floor, 61 sq m/656 sq ft, seating area Enjoy a stay in this large high-floor suite, complete with scenic views, seating area and range of convenient amenities. Take advantage of Executive Lounge access, offering complimentary breakfast and refreshments. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a plush bathrobe, slippers and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Double"
+    },
+    {
+        "name": "KING BUSINESS SUITE",
+        "price": "90000",
+        "description": "Ocean view, Executive Lounge access, high floor, 61 sq m/656 sq ft, seating area Enjoy a stay in this large high-floor suite, complete with scenic views, seating area and range of convenient amenities. Take advantage of Executive Lounge access, offering complimentary breakfast and refreshments. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a plush bathrobe, slippers and daily newspaper.",
+        "amenity": ["Free WiFi","On-site restaurant","Outdoor pool","Free parking","Fitness center","Business center","Concierge","Executive lounge","Room service","Meeting rooms","Pets not allowed"],
+        "type": "Triple"
+    }
+
+]
