@@ -24,7 +24,7 @@ var MongoClient = require('mongodb').MongoClient;
 app.set('trust proxy');
 
 app.use(cors({
-  origin: 'http://127.0.0.1:5500',
+  origin: 'https://groupx2.github.io/imperial-hotel',
   credentials: true
 }));
 
