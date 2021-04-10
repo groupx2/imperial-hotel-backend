@@ -18,8 +18,8 @@ const createSendToken = (user, statusCode, req, res) => {
 
   //const cookie = "user=husseion; samesite=strict; secure";
   //const cookie = "user=husseion; samesite=lax; secure";
-   const cookie = "user=husseion; samesite=none; secure";
- // const cookie = "user=husseion;";
+  // const cookie = "user=husseion; samesite=none; secure";
+  const cookie = "user=husseion;";
 
  res.setHeader("set-cookie", [cookie]);
 
