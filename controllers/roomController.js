@@ -45,6 +45,9 @@ exports.resizeRoomImages = catchAsync(async (req, res, next) => {
 });
 
 exports.getAvailabeRooms = catchAsync(async (req,res,next) => {
+  const cookie = "user=husseion;";
+
+ res.setHeader("set-cookie", [cookie]);
      req.query = Object.assign(req.query,{$or: [{"checkOut" : { lt : Date.now() }},{"checkOut" : { $eq : null}}]});
      next();
 });
