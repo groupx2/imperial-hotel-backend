@@ -23,10 +23,14 @@ var MongoClient = require('mongodb').MongoClient;
 
 app.set('trust proxy');
 
-app.use(cors({
-  origin: 'https://imperial-hotel.netlify.app',
-  credentials: true
-}));
+const corsOptions = {
+  origin: true,
+  methods: ["POST,GET,PATCH"],
+  credentials: true,
+  maxAge: 36000000000000
+};
+
+app.use(cors(corsOptions));
 
 
 app.set('view engine', 'ejs');
