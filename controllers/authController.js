@@ -22,7 +22,7 @@ const createSendToken = (user, statusCode, req, res) => {
     ),
     httpOnly: true,
     secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
-    sameSite: "None",
+    sameSite: "none",
     domain: 'https://imperial-hotel.netlify.app'
   });
 
