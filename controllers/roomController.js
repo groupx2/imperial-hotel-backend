@@ -50,10 +50,6 @@ exports.getAvailabeRooms = catchAsync(async (req,res,next) => {
 });
 
 exports.getAvailabeRoomCategories = catchAsync(async (req, res, next) => {
-  const cookie = `jwt=dsds; samesite=none; secure`;
-
-
-  res.setHeader("set-cookie", [cookie]);
   const availableRooms = await Room.aggregate([
     {
      $match:{$or: [{"checkOut" : { $lt : Date.now() }},{"checkOut" : { $eq : null}}]}
