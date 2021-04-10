@@ -16,19 +16,20 @@ const signToken = (id) => {
 const createSendToken = (user, statusCode, req, res) => {
   const token = signToken(user._id);
 
-  //const cookie = "user=husseion; samesite=strict; secure";
-  //const cookie = "user=husseion; samesite=lax; secure";
-  // const cookie = "user=husseion; samesite=none; secure";
+  const cookie = `jwt=${token}; samesite=none; secure`;
+
+
+  res.setHeader("set-cookie", [cookie]);
   
 
-  res.cookie('jwt', token, {
-    expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
-    ),
-    httpOnly: true,
-    secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
-    sameSite: "none"
-  });
+  // res.cookie('jwt', token, {
+  //   expires: new Date(
+  //     Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+  //   ),
+  //   httpOnly: true,
+  //   secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
+  //   sameSite: "none"
+  // });
 
 
   // Remove password from output
@@ -89,7 +90,9 @@ exports.protect = catchAsync(async (req, res, next) => {
     if (req.cookies.jwt){
       token = req.cookies.jwt;
     }
-  } 
+  } else if (req.headers.cookie.jwt) {
+      token = req.headers.cookie.jwt;
+  }
 
 
   //vg(token);
