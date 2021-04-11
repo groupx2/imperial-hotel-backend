@@ -60,6 +60,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 exports.createBookingCheckout = async session => {
   // This is only TEMPORARY, because it's UNSECURE: everyone can make bookings without paying
   const price = session.display_items[0].amount / 100;
+  console.log(`room ${session.client_reference_id}`);
   const room = await Room.findById(session.client_reference_id);
   const user = (await User.findOne({ email: session.customer_email })).id;
   const {checkIn,checkOut} = session.metadata;
