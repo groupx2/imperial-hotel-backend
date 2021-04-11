@@ -57,7 +57,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 //   await Booking.create({ room, user, price });
 // });
 
-exports.createBookingCheckout = async session => {
+const createBookingCheckout = async session => {
   // This is only TEMPORARY, because it's UNSECURE: everyone can make bookings without paying
   const price = session.display_items[0].amount / 100;
   const room = session.client_reference_id;
