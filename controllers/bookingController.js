@@ -24,7 +24,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
             name: `Room Number: ${room.roomNumber}`,
             images: [`${req.protocol}://${req.get('host')}/img/roomCategories/${room.roomCategory.photo}`,`${req.protocol}://${req.get('host')}/img/rooms/${room.images}`],
           },
-          unit_amount: room.roomCategory.price * 1000,
+          unit_amount: room.roomCategory.price * 100,
         },
         quantity: 1,
       },
