@@ -10,6 +10,7 @@ const path = require('path');
 
 const AppError = require("./utils/appError");
 const errorHandler = require("./controllers/errorController");
+const bookingController = require("./controllers/bookingController");
 
 const userRouter = require("./routes/userRoutes");
 const roomRouter = require("./routes/roomRoutes");
@@ -39,6 +40,8 @@ app.use(express.static(`${__dirname}/public`));
 
 
 app.use(helmet());
+
+app.post('/webhook-checkout',express.raw({type: 'application/json'}),bookingController.webhookCheckout);
 
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
