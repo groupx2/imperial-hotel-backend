@@ -64,8 +64,8 @@ exports.createBookingCheckout = async session => {
   const user = (await User.findOne({ email: session.customer_email })).id;
   const {checkIn,checkOut} = session.metadata;
 
-  await Booking.create({ room, user, price,checkIn,checkOut });
   await Room.findByIdAndUpdate(room,{checkIn,checkOut});
+  await Booking.create({ room, user, price,checkIn,checkOut });
 };
 
 
