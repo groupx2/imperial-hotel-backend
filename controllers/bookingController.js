@@ -68,7 +68,10 @@ exports.createBookingCheckout = catchAsync(async (req, res, next) => {
  await Booking.create({ room, user, price,checkIn,checkOut });
  await Room.findByIdAndUpdate(room,{checkIn,checkOut});
  
- res.redirect('https://imperial-hotel.netlify.app');
+ res.status(200).json({
+  status: 'success',
+  data: null
+});
 });
 
 
