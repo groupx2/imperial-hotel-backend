@@ -10,7 +10,6 @@ const path = require('path');
 
 const AppError = require("./utils/appError");
 const errorHandler = require("./controllers/errorController");
-const bookingController = require("./controllers/bookingController");
 
 const userRouter = require("./routes/userRoutes");
 const roomRouter = require("./routes/roomRoutes");
@@ -25,7 +24,7 @@ var MongoClient = require('mongodb').MongoClient;
 app.set('trust proxy');
 
 const corsOptions = {
-  origin: ['https://imperial-hotel.netlify.app','https://checkout.stripe.com'],
+  origin: ['https://imperial-hotel.netlify.app','https://imperial-hotel.netlify.app/login','https://groupx2.github.io'],
   methods: ["POST,GET,PATCH"],
   credentials: true,
 };
@@ -41,8 +40,6 @@ app.use(express.static(`${__dirname}/public`));
 
 app.use(helmet());
 
-
-
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
@@ -51,7 +48,7 @@ app.use(compression());
 
 
 
-app.post('/webhook-checkout',express.raw({type: 'application/json'}),bookingController.webhookCheckout);
+
 
 
 app.post("/enquiries", function (req, res) {

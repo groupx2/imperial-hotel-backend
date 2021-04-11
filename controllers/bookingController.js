@@ -30,14 +30,10 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       },
     ],
     mode: 'payment',
-    success_url: `https://imperial-hotel.netlify.app` || `${req.protocol}://${req.get('host')}/`,
+    success_url: `${req.protocol}://${req.get('host')}/api/bookings/payment-success?room=${req.params.roomId}&user=${req.user.id}&price=${room.roomCategory.price}&checkIn=${req.query.checkIn}&checkOut=${req.query.checkOut}`,
     cancel_url: `${req.protocol}://${req.get('host')}/`,
     customer_email: req.user.email,
-    client_reference_id: req.params.roomId,
-    metadata: {
-      checkIn: req.query.checkIn,
-      checkOut: req.query.checkOut
-    }
+    client_reference_id: req.params.roomId
   });
 
 
@@ -57,17 +53,25 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 //   await Booking.create({ room, user, price });
 // });
 
-const createBookingCheckout = async session => {
+exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   // This is only TEMPORARY, because it's UNSECURE: everyone can make bookings without paying
-  const price = session.display_items[0].amount / 100;
-  const room = session.client_reference_id;
-  const user = (await User.findOne({ email: session.customer_email })).id;
-  const {checkIn,checkOut} = session.metadata;
+  const { room, user, price,checkIn,checkOut } = req.query;
 
-  await Booking.create({ room, user, price,checkIn,checkOut });
-  await Room.findByIdAndUpdate(room,{checkIn,checkOut});
+  const roomCheck = await Room.findById(room);
+  const userCheck = await User.findById(user);
+
+
+  if (!room && !user && !price) return next();
+  if (!roomCheck || !userCheck) return next(new AppError('no user or room',404));
+  
+ await Booking.create({ room, user, price,checkIn,checkOut });
+ await Room.findByIdAndUpdate(room,{checkIn,checkOut});
  
-};
+ res.status(200).json({
+  status: 'success',
+  data: null
+});
+});
 
 
 exports.webhookCheckout = (req, res, next) => {
