@@ -37,6 +37,9 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 
 
+  if (session.payment_status === "paid") {
+       createBookingCheckout(req,res,next);
+  }
   
 
   // 3) Create session as response
@@ -53,7 +56,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 //   await Booking.create({ room, user, price });
 // });
 
-exports.createBookingCheckout = catchAsync(async (req, res, next) => {
+const createBookingCheckout = catchAsync(async (req, res, next) => {
   // This is only TEMPORARY, because it's UNSECURE: everyone can make bookings without paying
   const { room, user, price,checkIn,checkOut } = req.query;
 

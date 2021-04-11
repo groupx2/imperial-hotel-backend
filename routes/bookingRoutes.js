@@ -7,7 +7,7 @@ const router = express.Router();
 router.use(authController.protect);
 
 router.get('/checkout-session/:roomId', bookingController.getCheckoutSession);
-router.get('/payment-success',bookingController.createBookingCheckout);
+//router.get('/payment-success',bookingController.createBookingCheckout);
 
 router.use(authController.restrictTo('admin'));
 
