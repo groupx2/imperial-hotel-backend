@@ -19,9 +19,9 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     line_items: [
       {
         price_data: {
-          currency: 'usd',
+          currency: 'lkr',
           product_data: {
-            name: `${room.type} Room Name: ${room.name}`,
+            name: `Room Number: ${room.roomNumber}`,
             images: [`${req.protocol}://${req.get('host')}/img/rooms/${room.images}`],
           },
           unit_amount: room.roomCategory.price,
