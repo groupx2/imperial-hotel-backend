@@ -41,7 +41,7 @@ app.use(express.static(`${__dirname}/public`));
 
 app.use(helmet());
 
-app.post('/webhook-checkout',express.raw({type: 'application/json'}),bookingController.webhookCheckout);
+
 
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
@@ -51,7 +51,7 @@ app.use(compression());
 
 
 
-
+app.post('/webhook-checkout',express.raw({type: 'application/json'}),bookingController.webhookCheckout);
 
 
 app.post("/enquiries", function (req, res) {
