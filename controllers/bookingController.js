@@ -30,7 +30,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       },
     ],
     mode: 'payment',
-    success_url: `${req.protocol}://${req.get('host')}/api/bookings/payment-success?room=${req.params.roomId}&user=${req.user.id}&price=${room.roomCategory.price}&checkIn=${req.query.checkIn}&checkOut=${req.query.checkOut}`,
+    success_url: `https://${req.get('host')}/api/bookings/payment-success?room=${req.params.roomId}&user=${req.user.id}&price=${room.roomCategory.price}&checkIn=${req.query.checkIn}&checkOut=${req.query.checkOut}`,
     cancel_url: `${req.protocol}://${req.get('host')}/`,
     customer_email: req.user.email,
     client_reference_id: req.params.roomId
