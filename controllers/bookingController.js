@@ -93,6 +93,12 @@ exports.webhookCheckout = (req, res, next) => {
 };
 
 
+exports.getMyBookings = (req,res,next) => {
+  req.query = Object.assign(req.query,{user: req.user._id});
+  next();
+}
+
+
 
 exports.createBooking = factory.createOne(Booking);
 exports.getBooking = factory.getOne(Booking);

@@ -88,7 +88,6 @@ exports.protect = catchAsync(async (req, res, next) => {
       token = req.headers.cookie.jwt;
   }
 
-
   //vg(token);
   if (!token)
     return next(
@@ -99,6 +98,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
   // 3) Check if user still exists
   const currentUser = await User.findById(decoded.id);
+ 
   if (!currentUser) return next(new AppError("User does not exist", 401));
 
   // 4) Check if user changed password after the token was issued

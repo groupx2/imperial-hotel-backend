@@ -9,12 +9,17 @@ router.use(authController.protect);
 router.get('/checkout-session/:roomId', bookingController.getCheckoutSession);
 router.get('/payment-success',bookingController.createBookingCheckout);
 
+
+router.get('/getMyBookings',bookingController.getMyBookings,bookingController.getAllBookings);
+
 router.use(authController.restrictTo('admin'));
 
 router
   .route('/')
   .get(bookingController.getAllBookings)
   .post(bookingController.createBooking);
+
+  
 
 router
   .route('/:id')
