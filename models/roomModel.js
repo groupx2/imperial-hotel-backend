@@ -27,6 +27,8 @@ const roomSchema = new mongoose.Schema(
 );
 
 
+roomSchema.index({ roomNumber: 1 });
+
 roomSchema.pre(/^find/, function(next) {
   this.populate('roomCategory').populate();
   next();

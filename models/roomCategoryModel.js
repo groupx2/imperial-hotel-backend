@@ -34,7 +34,7 @@ const roomCategorySchema = new mongoose.Schema(
 );
 
 
-
+roomCategorySchema.index({ price: 1 });
 
 
 
