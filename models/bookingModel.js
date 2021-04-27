@@ -37,7 +37,6 @@ const bookingSchema = new mongoose.Schema({
   }
 });
 
-bookingSchema.index({ room: 1, user: 1 }, { unique: true });
 
 
 bookingSchema.pre(/^find/, function(next) {
